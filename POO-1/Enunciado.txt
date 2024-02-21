@@ -1,0 +1,54 @@
+﻿
+******* Enunciado *********
+
+Crea una aplicación de consola en C# que gestione ordenes de compra de una tienda. La aplicación debe usar la programación orientada 
+a objetos, no se admite uso de base de datos ni archivos JSON . La aplicación debe ser inicializada con 10 millones de ordenes entregadas
+, 100 pendientes , 200 productos y  3 millones de clientes. 
+
+
+(Ya existen algunas clases creadas de apoyo y para que seguir ese ejemplo de arquitectura)
+
+
+******* Se conoce *********
+
+.Orden: Representa una orden de compra y contiene información como hora en que se realizo la compra ( 0 a 23 ),id_Envio, 
+hora en que se entregó ( 0 a 23 ), estado (Pendiente, Entregada), id_cliente, id de cada producto comprado junto con la cantidad
+y precio de cada uno.
+
+.Producto: Contiene id, nombre,  precio, id_categoría.
+
+.Cliente: Contiene información como id, email, se sabe si acepta recibir emails de la tienda.
+
+.Envio: distancia en Km , método de envío (moto,carro,bicicleta).
+
+
+( Modelar las clases que considere necesarias para dar solución al problema, usa el tipo de lista que consideres más eficiente
+y estructuras de tipo <key,value> )
+ 
+
+
+***** Servicios que solicita la tienda *****
+
+.Servicio de ventas por cliente:
+Dado el id de un cliente, obtener el total que ha gastado en la tienda.
+
+
+.Servicio de email marketing : 
+Asmiendo que existe un método externo SendEmail(int id_user); desarrolle un sistema donde se envie un email a los 
+clientes con recomendaciones personalizadas. Se recomendarán 3 productos, basándote en la categoría de producto que más ha comprado.
+Además tendrá un texto que lo motive a seguir comprando en la tienda. Muestra en consola los 3 primeros emails.
+
+
+.Servicio de aproximación de tiempo de envío:
+Dado un envio, calcular el tiempo aproximado que demorará a partir de promediar de los datos históricos.
+
+
+.Servicio de completar entrega:
+Dado una orden, cambiar su estado a Entregada. En caso de que haya demorado más que el tiempo promedio que deberia haber tardado esa orden,
+enviar un email al cliente pidiendo disculpa por la demora.
+
+
+
+
+
+
