@@ -9,8 +9,8 @@ namespace POO_1.Models
 {
     public class Store
     {
-        public Dictionary<int, Category> categories {  get; set; }
-        public Dictionary<int, Product> products { get; set; }
+        public static Dictionary<int, Category> categories {  get; set; }
+        public static Dictionary<int, Product> products { get; set; }
 
         public Store() {
            categories = new Dictionary<int, Category>();
